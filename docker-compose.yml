@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
     app:
-        image: "laratest/app:${TAG:-latest}"
+        image: "laratest/app:${BUILD_NUMBER}"
         build:
             args:
                 user: testusr
