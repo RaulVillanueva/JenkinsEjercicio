@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
     app:
-        image: "laratest/app:${TAG:-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER}}" 
+        image: "sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER}"
         build:
             args:
                 user: testusr
