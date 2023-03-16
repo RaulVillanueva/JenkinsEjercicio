@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 class AlumnosController extends Controller{
 
     public function getMethod(){
-        $this->index();
-        $this->index();
+        return $this->index();
     }
 
     public function index(){
