@@ -4,8 +4,8 @@ pipeline {
         OLD_CONTAINER_NAME = "test-${GIT_BRANCH}-1.0.0-${BUILD_NUMBER.toInteger() - 1}"
     }
     stages {
-        stage('minus1'){
-            step {
+        stage('minus1') {
+            steps {
                 echo 'OLD_CONTAINER_NAME'
             }    
         }
