@@ -10,22 +10,22 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'php artisan test --filter AlumnosControllerTest'
+                bat 'php artisan test --filter AlumnosControllerTest'
             }
         }
         stage('Build') {
             steps {
-                sh 'docker-compose build'
+                bat 'docker-compose build'
             }
         }
         stage('Stop containers') {
             steps {
-                sh 'docker stop $(docker ps -q)'
+                bat 'docker stop $(docker ps -q)'
             }
         }
         stage('Start container') {
             steps {
-                sh 'docker-compose up -d'
+                bat 'docker-compose up -d'
             }
         }
     }
