@@ -23,8 +23,8 @@ pipeline {
         }
         stage('Stop containers') {
             steps {
-                bat 'docker stop test-nginx-sicei-1.0.0-${BUILD_NUMBER_MINUS_ONE}'
-                bat 'docker stop test-app-sicei-1.0.0-${BUILD_NUMBER_MINUS_ONE}'
+                bat "docker stop test-nginx-sicei-1.0.0-${BUILD_NUMBER_MINUS_ONE}"
+                bat "docker stop test-app-sicei-1.0.0-${BUILD_NUMBER_MINUS_ONE}"
             }
         }
         stage('Start container') {
