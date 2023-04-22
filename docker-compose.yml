@@ -9,7 +9,7 @@ services:
                 uid: 1000
             context: ./
             dockerfile: Dockerfile
-        container_name: test-app-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER}
+        container_name: test-app-sicei-1.0.0-${BUILD_NUMBER}
         restart: unless-stopped
         working_dir: /var/www/
         volumes:
@@ -19,7 +19,7 @@ services:
 
     web:
         image: nginx:1.19.4
-        container_name: test-nginx-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER}
+        container_name: test-nginx-sicei-1.0.0-${BUILD_NUMBER}
         restart: unless-stopped
         ports:
             - ${SERVER_PORT:-80}:80
