@@ -21,12 +21,6 @@ pipeline {
                 bat 'docker-compose build'
             }
         }
-        stage('Stop containers') {
-            steps {
-                bat 'docker stop test-nginx-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER_MINUS_ONE}'
-                bat 'docker stop test-app-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER_MINUS_ONE}'
-            }
-        }
         stage('Start container') {
             steps {
                 bat 'docker-compose up -d'
