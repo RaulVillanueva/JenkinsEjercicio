@@ -15,35 +15,7 @@ class AlumnosController extends Controller{
             [
                 'nombre' => 'Raul Villanueva Hernandez',
                 'matricula' => 16001061
-            ],
-            [
-                'nombre' => 'Julian Perez Koo',
-                'matricula' => 98001765
-            ],
-            [
-                'nombre' => 'David Paredes Canche',
-                'matricula' => 34001924
-            ],
-            [
-                'nombre' => 'Gener Echeverria Chi',
-                'matricula' => 15001743
-            ],
-            [
-                'nombre' => 'Raul Villanueva Hernandez',
-                'matricula' => 16001061
-            ],
-            [
-                'nombre' => 'Julian Perez Koo',
-                'matricula' => 98001765
-            ],
-            [
-                'nombre' => 'David Paredes Canche',
-                'matricula' => 34001924
-            ],
-            [
-                'nombre' => 'Gener Echeverria Chi',
-                'matricula' => 15001743
-            ],
+            ]            
         ];  
     }
 }
