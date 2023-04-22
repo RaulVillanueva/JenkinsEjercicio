@@ -1,6 +1,14 @@
 pipeline {
     agent any
+    environment {
+        OLD_CONTAINER_NAME = "test-${GIT_BRANCH}-1.0.0-${BUILD_NUMBER.toInteger() - 1}"
+    }
     stages {
+        stage('minus1'){
+            step {
+                echo 'OLD_CONTAINER_NAME'
+            }    
+        }
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
