@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('minus1') {
             steps {
-                echo 'OLD_CONTAINER_NAME'
+                echo "${OLD_CONTAINER_NAME}"
             }    
         }
         stage('Checkout') {
