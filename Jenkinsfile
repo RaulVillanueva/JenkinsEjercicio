@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Stop containers') {
             steps {
-                bat 'docker stop $(docker ps -q)'
+                bat 'docker stop $(docker ps -aq)'
             }
         }
         stage('Start container') {
