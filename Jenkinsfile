@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        BUILD_NUMBER_MINUS_ONE = "${BUILD_NUMBER.toInteger() - 1}"
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -20,8 +23,8 @@ pipeline {
         }
         stage('Stop containers') {
             steps {
-                bat 'docker stop test-app'
-                bat 'docker stop test-nginx'
+                bat 'docker stop test-nginx-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER_MINUS_ONE}'
+                bat 'docker stop test-app-sicei-${GIT_BRANCH}:1.0.0-${BUILD_NUMBER_MINUS_ONE}'
             }
         }
         stage('Start container') {
